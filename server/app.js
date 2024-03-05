@@ -8,7 +8,7 @@ app.use(express.urlencoded({extended:false}));
 
 
 //routes
-app.use('/',router);
+app.use('/api/tasks',router);
 
 
 

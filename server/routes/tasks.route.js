@@ -1,13 +1,23 @@
 const express=require('express')
 const router=express.Router()
-const {getTasks}=require('../controllers/tasks.controller.js')
+const {getTasks,addTasks,getsingleTasks,deleteTasks,editTasks}=require('../controllers/tasks.controller.js')
 
 
 
 // for fetching all tasks
-router.get('/api/tasks',getTasks)
+router.get('/',getTasks)
 
-router.post('/api/tasks',addTasks)
+// receiving a single tasks
+router.get('/:id',getsingleTasks)
+
+// creating a single tasks
+router.post('/',addTasks)
+
+// editing a delete tasks
+router.put('/:id',editTasks)
+
+// deleting a tasks
+router.delete('/:id',deleteTasks)
 
 
 module.exports=router;
