@@ -5,7 +5,7 @@ const getTasks=(req,res)=>{
 }
 
 const getsingleTasks=(req,res)=>{
-    res.send("Single tasks");
+    res.json({id:req.params.id});
 }
 
 const addTasks=(req,res)=>{
